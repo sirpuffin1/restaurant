@@ -1,6 +1,18 @@
 import Script from 'next/script';
+import { useEffect } from 'react';
 
 const FacebookPage = () => {
+
+  useEffect(() => {
+    const facebookScript = document.createElement("script");
+    facebookScript.async = true;
+    facebookScript.src =
+      "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0";
+    document.body.appendChild(facebookScript);
+    if(window.FB){
+      window.FB.XFBML.parse();
+      }
+  }, []);
   return (
     <div>
     <Script

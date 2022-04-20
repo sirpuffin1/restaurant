@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className='flex items-center flex-wrap bg-red-600 p-3 '>
         <Link href='/'>
-          <a className='inline-flex items-center p-2 mr-4 '>
+          <a className='inline-flex items-center p-3 mr-5 '>
             <svg
               viewBox='0 0 24 24'
               xmlns='http://www.w3.org/2000/svg'
@@ -23,7 +23,7 @@ const Navbar = () => {
             />
             </svg>
             <span className='text-xl text-white font-bold uppercase tracking-wide'>
-              Talwind CSS
+              Rock & Wings
             </span>
           </a>
         </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
                 </a>
             </Link>
             <Link href='/Contact'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-red-500 hover:text-white'>
+              <a className='lg:inline-flex lg:w-auto w-full px-4 py-2 rounded text-white font-bold items-center justify-center hover:bg-red-500 hover:text-white'>
                 Contact us
               </a>
             </Link>

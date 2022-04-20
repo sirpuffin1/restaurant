@@ -1,0 +1,54 @@
+.embla {
+  overflow: hidden;
+  background-color: black;
+}
+
+  .embla__container {
+    display: flex;
+    
+  }
+
+  .embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    flex-direction: column;
+    height: 40vh;
+    width: 500px;
+    
+  }
+  @media (min-width: 640px) {
+  .embla__slide {
+    flex: 0 0 50%; /* Breakpoint SM slide covers 50% of the viewport */
+  }
+}
+
+@media (min-width: 768px) {
+  .embla__slide {
+    flex: 0 0 70%; /* Breakpoint SM slide covers 50% of the viewport */
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla__slide {
+    flex: 0 0 100%; /* Breakpoint SM slide covers 50% of the viewport */
+  }
+}
+
+  .embla__slide__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 500px;
+   
+  }
+  
+  .embla__slide__img {
+    position: absolute;
+    display: block;
+    min-height: 800px;
+    max-height: 800px;
+    
+  }
+

@@ -9,6 +9,9 @@ function MyApp({ Component, pageProps }) {
     facebookScript.src =
       "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0";
     document.body.appendChild(facebookScript);
+    if(window.FB){
+      window.FB.XFBML.parse();
+      }
   }, []);
 
   return (

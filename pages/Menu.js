@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { useEffect, useRef, createRef } from "react";
 import { getAllCategories } from "../prisma/categories";
 import styles from "../styles/Menu.module.css";
 import * as Scroll from 'react-scroll'
@@ -20,7 +18,7 @@ const Menu = ({ categories }) => {
     <div>
       <div>
         {categories.map((category) => (
-          <button className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center m-4  dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"><Link to={category.name} smooth={true}>{category.name}</Link></button>
+          <button key={category.id} className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center m-4  dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"><Link to={category.name} smooth={true}>{category.name}</Link></button>
         ))}
       </div>
       {categories.map((category) => (
@@ -30,8 +28,9 @@ const Menu = ({ categories }) => {
           </h1>
           <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 gap-5">
           {category.items.map((item) => (
+              // eslint-disable-next-line react/jsx-key
               <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img className="w-full" src={item.imgUrl} alt="Delicious food"></img>
+                <img className="w-full" key={item.id} src={item.imgUrl} alt="Delicious food"></img>
                   <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{item.name}</div>
                     <p className="text-gray-700 text-base">

@@ -35,7 +35,7 @@ export default function Home() {
         
       </main>
       <div className='flex justify-center items-center bg-black'>
-      <FacebookPage/>
+      {/* <FacebookPage/> */}
       </div>
     </div>
   )

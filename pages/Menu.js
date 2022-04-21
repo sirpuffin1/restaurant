@@ -31,7 +31,7 @@ const Menu = ({ categories }) => {
           <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 gap-5">
           {category.items.map((item) => (
               <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="https://rockandwings.rocks/wp-content/uploads/sites/9/2017/06/highway-to-hell-02-600x600.jpg" alt="Mountain"></img>
+                <img className="w-full" src={item.imgUrl} alt="Delicious food"></img>
                   <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{item.name}</div>
                     <p className="text-gray-700 text-base">

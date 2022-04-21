@@ -19,6 +19,7 @@ model Category {
 model MenuItem {
   id      String    @id @default(auto()) @map("_id") @db.ObjectId
   name    String    @unique
+  imgUrl  String    @default("")
   description   String
   price   Float   @default(50)
   category     Category    @relation(fields: [categoryId], references: [id])

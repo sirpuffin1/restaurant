@@ -18,7 +18,9 @@ const Menu = ({ categories }) => {
     <div>
       <div>
         {categories.map((category) => (
-          <button key={category.id} className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center m-4  dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"><Link to={category.name} smooth={true}>{category.name}</Link></button>
+          <Link key={category.id}to={category.name} smooth={true}>
+          <button  key={category.id} className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center m-4  dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">{category.name}</button>
+          </Link>
         ))}
       </div>
       {categories.map((category) => (

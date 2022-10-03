@@ -29,7 +29,9 @@ We have a selection of burgers, wings, salads, wraps and beer.
         </div>
 
 <Carousel {...props}/>
-
+        <div>
+            <h1 className="bg-black">hello</h1>
+        </div>
         </>
     );
 }
